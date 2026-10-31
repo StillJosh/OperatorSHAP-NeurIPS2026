@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - attribution_sweep
+  - override /model: fno1d_relu
+
+hydra:
+  sweeper:
+    params:
+      dataset: burgers_1d

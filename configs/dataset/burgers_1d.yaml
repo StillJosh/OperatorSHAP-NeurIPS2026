@@ -1,0 +1,7 @@
+defaults:
+  - _grid_1d
+
+dataset_short: burgers1d
+
+class_config:
+  pde_name: burgers_1d

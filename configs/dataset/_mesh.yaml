@@ -1,0 +1,20 @@
+defaults:
+  - /model@_global_.model: gino_mgn
+
+in_channels: 2
+out_channels: 2
+readout: point
+backbone_short: ${dataset.dataset_short}
+reference_short: ${dataset.dataset_short}
+reference_segment: gt
+explainer_lr: 3.0e-4
+explainer_batch_size: 1
+
+resolutions: [64]
+explainer_resolutions: [64]
+
+class_config:
+  _target_: operator_shap.dataset.mesh.MGNDataset
+  data_dir: ${data_root}
+  t0_stride: 10
+  latent_grid_size: 64

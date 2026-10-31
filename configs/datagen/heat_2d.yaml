@@ -1,0 +1,21 @@
+name: heat_2d
+
+solver:
+  _target_: operator_shap.datagen.solvers.analytical_2d.HeatSolver2D
+  params:
+    kappa: 0.01
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.random_fourier_2d
+  n_modes: 8
+  power_decay: 2.0
+  amplitude: 1.0
+
+grid:
+  domain_x: [0.0, 1.0]
+  domain_y: [0.0, 1.0]
+  resolution: 128
+
+time:
+  t_final: 1.0
+  n_snapshots: 51

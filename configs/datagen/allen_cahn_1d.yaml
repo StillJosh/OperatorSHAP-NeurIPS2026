@@ -1,0 +1,19 @@
+name: allen_cahn_1d
+
+solver:
+  _target_: operator_shap.datagen.solvers.spectral_mol_1d.AllenCahnSolver1D
+  params:
+    eps: 0.1
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.tanh_mixture_1d
+  n_transitions: 3
+  interface_width: 0.05
+
+grid:
+  domain: [0.0, 1.0]
+  resolution: 1024
+
+time:
+  t_final: 0.5
+  n_snapshots: 101

@@ -1,0 +1,13 @@
+# @package _global_
+hydra:
+  sweeper:
+    params:
+      dataset: burgers_1d,heat_2d,reaction_diffusion_2d,shallow_water_2d
+      attribution.n_players: 256
+      multiplier: 1,2,4,8,16,32,64,128,256
+
+multiplier: 1
+run_name: ${run_kind}_n${attribution.n_players}_m${multiplier}
+metrics:
+  ig_steps: ${multiplier}
+  cheap_budget: ${eval:'128 * ${multiplier}'}

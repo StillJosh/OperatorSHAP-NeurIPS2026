@@ -1,0 +1,5 @@
+# @package _global_
+hydra:
+  sweeper:
+    params:
+      dataset: heat_1d,advection_1d,burgers_1d,allen_cahn_1d,diffusion_sorption_1d,heat_2d,darcy_2d,reaction_diffusion_2d,shallow_water_2d,heat_3d

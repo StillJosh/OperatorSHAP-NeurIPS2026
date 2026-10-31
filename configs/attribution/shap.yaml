@@ -1,0 +1,15 @@
+_target_: operator_shap.methods.ClassicalSHAP
+run_name: shap_n${attribution.n_players}_${approx_budget_segment:${attribution.approximator},${attribution.budget}}
+
+n_players: 16
+budget: 800
+n_samples: 10
+baseline: ${dataset.baseline}
+approximator: proxyshap
+max_coalition_batch: 4096
+
+query:
+  points: ${dataset.x_star}
+
+debug_params:
+  n_samples: 2

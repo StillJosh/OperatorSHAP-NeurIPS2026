@@ -1,0 +1,7 @@
+defaults:
+  - heat_1d
+
+dataset_short: heat1dmid
+explainer_lr: 1.0e-3
+backbone_short: heat1d
+readout: midpoint

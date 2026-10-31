@@ -1,0 +1,6 @@
+defaults:
+  - darcy_2d
+
+dataset_short: darcy2dmean
+backbone_short: darcy2d
+baseline: sample_mean

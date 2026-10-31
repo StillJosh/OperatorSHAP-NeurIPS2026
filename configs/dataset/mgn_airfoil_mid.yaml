@@ -1,0 +1,6 @@
+defaults:
+  - mgn_airfoil
+
+dataset_short: mgn_airmid
+backbone_short: mgn_air
+readout: midpoint

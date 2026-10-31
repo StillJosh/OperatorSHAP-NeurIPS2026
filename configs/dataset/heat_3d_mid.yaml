@@ -1,0 +1,6 @@
+defaults:
+  - heat_3d
+
+dataset_short: heat3dmid
+backbone_short: heat3d
+readout: midpoint

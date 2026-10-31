@@ -1,0 +1,11 @@
+defaults:
+  - fastshap
+
+n_players: 64
+n_coalitions: 32
+
+max_coalition_batch: ${dataset.coalition_batch}
+
+debug_params:
+  n_coalitions: 8
+  max_coalition_batch: 8

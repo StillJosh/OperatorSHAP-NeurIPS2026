@@ -1,0 +1,42 @@
+[project]
+name = "operator-shap"
+version = "1.0.0"
+description = "Supplementary code for the NeurIPS 2026 paper 'OperatorSHAP: Fast and Accurate Shapley Value Estimation for Neural Operators'"
+readme = "README.md"
+license = "MIT"
+requires-python = "~=3.12.0"
+dependencies = [
+    "torch>=2.7,<2.8",
+    "neuraloperator==2.0.0",
+    # LocalNO (2D backbones); its compiled extension must match the local torch, so it is built from source.
+    "torch-harmonics==0.8.0; sys_platform == 'linux'",
+    # GINO neighbourhood reductions on the meshes; wheels come from the PyG index below.
+    "torch-scatter; sys_platform == 'linux'",
+    "shapiq",
+    "xgboost",
+    "hydra-core>=1.3.2",
+    "numpy>=1.26",
+    "scipy>=1.13",
+    "sympy",
+    "pandas>=2.2",
+    "joblib>=1.3",
+    "tqdm>=4.67",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+]
+
+[project.optional-dependencies]
+# Reading the MeshGraphNets tfrecords in download_mgn.py.
+mgn = ["tensorflow"]
+
+[build-system]
+requires = ["uv_build>=0.7.13,<0.8.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+shapiq = { git = "https://github.com/mmschlk/shapiq", rev = "8f23fbd74ddab2e590b5b9cc4ba33fc45b77d725" }
+
+[tool.uv]
+find-links = ["https://data.pyg.org/whl/torch-2.7.0+cu126.html"]
+no-binary-package = ["torch-harmonics"]
+no-build-package = ["torch-scatter"]

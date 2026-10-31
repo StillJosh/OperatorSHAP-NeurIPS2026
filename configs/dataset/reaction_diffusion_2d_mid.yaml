@@ -1,0 +1,7 @@
+defaults:
+  - reaction_diffusion_2d
+
+dataset_short: rxndiff2dmid
+explainer_lr: 1.0e-3
+backbone_short: rxndiff2d
+readout: midpoint

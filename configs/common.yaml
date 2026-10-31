@@ -1,0 +1,16 @@
+# @package _global_
+seed: 42
+device: cuda
+data_root: data
+output_root: outputs
+
+out_dir: ${output_root}/${dataset.dataset_short}/${model.family}/${run_name}
+backbone_checkpoint: ${output_root}/${dataset.backbone_short}/${model.family}/backbone/best_model.pt
+explainer_checkpoint: ${output_root}/${dataset.dataset_short}/${model.family}/explainer/best_model.pt
+
+hydra:
+  run:
+    dir: ${out_dir}
+  sweep:
+    dir: ${output_root}
+    subdir: ${dataset.dataset_short}/${model.family}/${run_name}

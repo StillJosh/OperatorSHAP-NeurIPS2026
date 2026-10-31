@@ -1,0 +1,9 @@
+# @package _global_
+
+defaults:
+  - attribution_sweep
+
+hydra:
+  sweeper:
+    params:
+      dataset: darcy_2d_mean,diffusion_sorption_1d_mean

@@ -1,0 +1,18 @@
+defaults:
+  - _mesh
+
+dataset_short: mgn_cyl
+
+baseline: global_mean
+
+x_star: [[0.4, 0.1], [0.8, 0.2], [0.15, 0.3]]
+
+gno_radius: 0.05
+
+coalition_batch: 128
+
+class_config:
+  ds_name: mgn_cylinder_flow
+  t0: 0
+  t_star: 100
+  t_lookahead: 100

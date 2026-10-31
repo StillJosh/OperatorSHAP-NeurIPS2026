@@ -1,0 +1,20 @@
+family: fno
+
+arch:
+  _target_: operator_shap.models.fno.FNOModel
+  _convert_: all
+  net:
+    _target_: neuralop.models.FNO
+    in_channels: ${in_channels}
+    out_channels: ${out_channels}
+    hidden_channels: 64
+    n_layers: 4
+    n_modes: [16, 16]
+    domain_padding: 0.5
+
+debug_params:
+  arch:
+    net:
+      hidden_channels: 8
+      n_layers: 2
+      n_modes: [4, 4]

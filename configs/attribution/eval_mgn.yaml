@@ -1,0 +1,7 @@
+defaults:
+  - fastshap_mgn
+
+n_samples: 10
+
+debug_params:
+  n_samples: 2

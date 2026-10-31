@@ -1,0 +1,24 @@
+name: diffusion_sorption_1d
+
+solver:
+  _target_: operator_shap.datagen.solvers.fd_mol_1d.DiffusionSorptionSolver1D
+  params:
+    D: 5.0e-4
+    k_f: 3.5
+    n_f: 0.4
+    rho_s: 1.0
+    porosity: 0.29
+    c_left: 1.0
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.boundary_driven_1d
+  c_left: 1.0
+  decay_length: 0.05
+
+grid:
+  domain: [0.0, 1.0]
+  resolution: 1024
+
+time:
+  t_final: 500.0
+  n_snapshots: 101

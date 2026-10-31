@@ -1,0 +1,27 @@
+family: gino
+
+arch:
+  _target_: operator_shap.models.gino_2d.GINOBackbone
+  _convert_: all
+  coord_pad_3d: false
+  net:
+    _target_: operator_shap.models.gino.GINO
+    in_channels: ${in_channels}
+    out_channels: ${out_channels}
+    fno_n_modes: [16, 16]
+    fno_hidden_channels: 64
+    fno_n_layers: 4
+    in_gno_radius: ${dataset.gno_radius}
+    out_gno_radius: 0.05
+    in_gno_transform_type: nonlinear
+    out_gno_transform_type: nonlinear
+    gno_coord_dim: 2
+    gno_use_open3d: false
+    gno_use_torch_scatter: true
+
+debug_params:
+  arch:
+    net:
+      fno_hidden_channels: 8
+      fno_n_layers: 2
+      fno_n_modes: [4, 4]

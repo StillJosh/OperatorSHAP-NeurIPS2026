@@ -1,0 +1,18 @@
+data_root: data
+datasets:
+  - heat_1d
+  - advection_1d
+  - burgers_1d
+  - allen_cahn_1d
+  - diffusion_sorption_1d
+  - heat_2d
+  - darcy_2d
+  - reaction_diffusion_2d
+  - shallow_water_2d
+  - heat_3d
+  - mgn_airfoil
+  - mgn_cylinder_flow
+
+hydra:
+  run:
+    dir: ${data_root}/logs/baseline_stats

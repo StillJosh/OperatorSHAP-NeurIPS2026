@@ -1,0 +1,9 @@
+defaults:
+  - _grid_2d
+
+dataset_short: rxndiff2d
+in_channels: 2
+out_channels: 2
+
+class_config:
+  pde_name: reaction_diffusion_2d

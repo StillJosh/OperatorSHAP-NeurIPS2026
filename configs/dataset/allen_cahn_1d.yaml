@@ -1,0 +1,7 @@
+defaults:
+  - _grid_1d
+
+dataset_short: ac1d
+
+class_config:
+  pde_name: allen_cahn_1d

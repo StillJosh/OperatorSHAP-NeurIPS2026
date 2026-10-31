@@ -1,0 +1,18 @@
+name: burgers_1d
+
+solver:
+  _target_: operator_shap.datagen.solvers.spectral_mol_1d.BurgersSolver1D
+  params:
+    nu: 0.01
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.mixed_1d
+  amplitude: 1.0
+
+grid:
+  domain: [0.0, 1.0]
+  resolution: 1024
+
+time:
+  t_final: 1.0
+  n_snapshots: 101

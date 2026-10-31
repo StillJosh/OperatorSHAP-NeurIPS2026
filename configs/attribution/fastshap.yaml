@@ -1,0 +1,18 @@
+_target_: operator_shap.methods.FastSHAP
+run_name: explainer
+
+n_coalitions: 128
+baseline: ${dataset.baseline}
+max_coalition_batch: 128
+sampling: shapley_kernel
+
+n_players: identity
+
+query:
+  points: ${dataset.x_star}
+  radius: 0.05
+  kernel: gaussian
+
+debug_params:
+  n_coalitions: 16
+  max_coalition_batch: 32

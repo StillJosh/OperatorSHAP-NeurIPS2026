@@ -1,0 +1,16 @@
+name: darcy_2d
+
+solver:
+  _target_: operator_shap.datagen.solvers.darcy_2d.DarcySolver2D
+  params:
+    forcing: 1.0
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.log_normal_field_2d
+  alpha: 4.0
+  sigma: 1.0
+
+grid:
+  domain_x: [0.0, 1.0]
+  domain_y: [0.0, 1.0]
+  resolution: 128

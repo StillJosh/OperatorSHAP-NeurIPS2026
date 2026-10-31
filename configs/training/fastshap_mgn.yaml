@@ -1,0 +1,9 @@
+defaults:
+  - fastshap
+
+num_workers: 4
+n_epochs: 100
+early_stopping_patience: 15
+
+amp:
+  enabled: true

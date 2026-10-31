@@ -1,0 +1,16 @@
+defaults:
+  - datagen: advection_1d
+  - _self_
+
+seed: 42
+n_samples: 5000
+val_frac: 0.15
+n_workers: -1
+data_root: data
+
+hydra:
+  run:
+    dir: ${data_root}/logs/${datagen.name}
+  sweep:
+    dir: ${data_root}/logs
+    subdir: ${datagen.name}

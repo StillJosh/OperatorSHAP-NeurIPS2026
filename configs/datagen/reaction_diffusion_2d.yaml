@@ -1,0 +1,23 @@
+name: reaction_diffusion_2d
+
+solver:
+  _target_: operator_shap.datagen.solvers.spectral_mol_2d.GrayScottSolver2D
+  params:
+    Du: 2.0e-5
+    Dv: 1.0e-5
+    F: 0.04
+    k: 0.06
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.gray_scott_ic_2d
+  n_seeds: 5
+  seed_radius: 0.05
+
+grid:
+  domain_x: [0.0, 2.5]
+  domain_y: [0.0, 2.5]
+  resolution: 128
+
+time:
+  t_final: 5000.0
+  n_snapshots: 51

@@ -1,0 +1,12 @@
+defaults:
+  - run_metrics
+  - _self_
+
+run_kind: timing
+
+attribution:
+  n_samples: 100
+
+timing:
+  n_warmup: 5
+  n_threads: 1

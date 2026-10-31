@@ -1,0 +1,6 @@
+defaults:
+  - diffusion_sorption_1d
+
+dataset_short: diffsorp1dmean
+backbone_short: diffsorp1d
+baseline: sample_mean

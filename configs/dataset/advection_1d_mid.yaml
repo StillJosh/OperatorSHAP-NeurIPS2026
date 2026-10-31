@@ -1,0 +1,7 @@
+defaults:
+  - advection_1d
+
+dataset_short: adv1dmid
+explainer_batch_size: 32
+backbone_short: adv1d
+readout: midpoint

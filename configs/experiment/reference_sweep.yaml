@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - budget_runs
+
+hydra:
+  sweeper:
+    params:
+      dataset: heat_1d,advection_1d,burgers_1d,allen_cahn_1d,diffusion_sorption_1d,heat_2d,darcy_2d,reaction_diffusion_2d,shallow_water_2d
+      attribution.n_players: 64,1024
+
+attribution:
+  approximator: proxyshap
+  budget: 300000

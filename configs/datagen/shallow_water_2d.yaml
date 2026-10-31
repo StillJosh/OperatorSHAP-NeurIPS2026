@@ -1,0 +1,22 @@
+name: shallow_water_2d
+
+solver:
+  _target_: operator_shap.datagen.solvers.shallow_water_2d.ShallowWaterSolver2D
+  params:
+    g: 9.81
+    cfl: 0.4
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.gaussian_bump_2d
+  base_height: 1.0
+  bump_height: 2.0
+  bump_width: 0.08
+
+grid:
+  domain_x: [0.0, 1.0]
+  domain_y: [0.0, 1.0]
+  resolution: 128
+
+time:
+  t_final: 0.5
+  n_snapshots: 51

@@ -1,0 +1,8 @@
+defaults:
+  - _grid_1d
+
+dataset_short: adv1d
+
+class_config:
+  pde_name: advection_1d
+  t_idx: 30

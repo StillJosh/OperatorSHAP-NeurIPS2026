@@ -1,0 +1,21 @@
+defaults:
+  - _mesh
+
+dataset_short: mgn_air
+
+baseline: per_node_mean
+reference_segment: ps_b50000
+
+x_star: [[0.67, -0.1], [0.33, 0.1], [1.2, 0.0]]
+
+gno_radius: 0.12
+
+coalition_batch: 32
+
+class_config:
+  ds_name: mgn_airfoil
+  t0: 150
+  t_star: 200
+  t_lookahead: 50
+  cutout: [-2.0, 3.0, -1.0, 1.0]
+  vel_scale: 200.0

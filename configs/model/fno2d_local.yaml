@@ -1,0 +1,17 @@
+defaults:
+  - fno2d
+  - _self_
+
+family: localFNO
+
+arch:
+  net:
+    _target_: neuralop.models.local_no.LocalNO
+    default_in_shape:
+      - ${eval:'max(${dataset.resolutions})'}
+      - ${eval:'max(${dataset.resolutions})'}
+
+debug_params:
+  arch:
+    net:
+      default_in_shape: [16, 16]

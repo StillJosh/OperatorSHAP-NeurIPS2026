@@ -1,0 +1,7 @@
+defaults:
+  - darcy_2d
+
+dataset_short: darcy2dmid
+explainer_lr: 1.0e-3
+backbone_short: darcy2d
+readout: midpoint

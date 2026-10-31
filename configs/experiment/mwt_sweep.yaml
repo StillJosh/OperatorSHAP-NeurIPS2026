@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - attribution_sweep
+  - override /model: mwt_gupta_1d
+
+hydra:
+  sweeper:
+    params:
+      dataset: heat_1d,advection_1d

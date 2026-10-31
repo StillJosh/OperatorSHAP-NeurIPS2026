@@ -1,0 +1,9 @@
+# @package _global_
+
+defaults:
+  - attribution_sweep
+
+hydra:
+  sweeper:
+    params:
+      dataset: burgers_1d_ho256,burgers_1d_ho1024,heat_2d_ho256,heat_2d_ho1024

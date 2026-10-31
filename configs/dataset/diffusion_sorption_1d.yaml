@@ -1,0 +1,7 @@
+defaults:
+  - _grid_1d
+
+dataset_short: diffsorp1d
+
+class_config:
+  pde_name: diffusion_sorption_1d

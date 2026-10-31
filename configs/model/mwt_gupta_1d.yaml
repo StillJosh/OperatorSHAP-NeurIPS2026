@@ -1,0 +1,24 @@
+family: mwtGupta
+
+arch:
+  _target_: operator_shap.models.mwt_gupta.MWTGuptaBackbone
+  _convert_: all
+  concat_grid: true
+  grid_range: 1.0
+  net:
+    _target_: operator_shap.models.mwt_gupta.models.MWT1d
+    ich: ${eval:'${in_channels} + 1'}
+    alpha: 10
+    c: 16
+    k: 4
+    nCZ: 2
+    L: 0
+    base: legendre
+
+debug_params:
+  arch:
+    net:
+      alpha: 6
+      c: 8
+      k: 4
+      nCZ: 2

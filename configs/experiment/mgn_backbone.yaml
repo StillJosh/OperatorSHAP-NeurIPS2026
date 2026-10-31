@@ -1,0 +1,8 @@
+# @package _global_
+defaults:
+  - override /training: backbone_gino
+
+hydra:
+  sweeper:
+    params:
+      dataset: mgn_airfoil,mgn_cylinder_flow

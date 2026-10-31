@@ -1,0 +1,9 @@
+defaults:
+  - fastshap
+
+n_players: ???
+n_samples: 30
+max_coalition_batch: 512
+
+debug_params:
+  n_samples: 2

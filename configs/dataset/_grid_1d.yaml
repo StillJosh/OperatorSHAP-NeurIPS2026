@@ -1,0 +1,10 @@
+defaults:
+  - _grid
+  - /model@_global_.model: fno1d
+
+explainer_resolutions: [8, 16, 32, 64, 128, 256, 512, 1024]
+
+x_star: [[0.5], [0.25], [0.75]]
+
+class_config:
+  t_idx: 50

@@ -1,0 +1,10 @@
+defaults:
+  - _grid_2d
+
+dataset_short: darcy2d
+
+class_config:
+  pde_name: darcy_2d
+  input_key: permeability
+  target_key: pressure
+  t_idx: null

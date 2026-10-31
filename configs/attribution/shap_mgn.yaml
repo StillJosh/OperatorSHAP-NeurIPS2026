@@ -1,0 +1,10 @@
+defaults:
+  - shap
+
+n_players: 64
+budget: 10000
+
+max_coalition_batch: ${dataset.coalition_batch}
+
+debug_params:
+  n_samples: 2

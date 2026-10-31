@@ -1,0 +1,11 @@
+defaults:
+  - fno1d
+  - _self_
+
+family: fnoRelu
+
+arch:
+  net:
+    non_linearity:
+      _target_: hydra.utils.get_method
+      path: torch.nn.functional.relu

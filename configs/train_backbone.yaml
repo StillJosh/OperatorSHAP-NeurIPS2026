@@ -1,0 +1,19 @@
+defaults:
+  - common
+  - dataset: advection_1d
+  - training: backbone
+  - optimizer: adamw
+  - scheduler: cosine
+  - loss@train_loss: mse
+  - loss@val_loss: mse
+  - _self_
+  - mode: default
+
+run_name: backbone
+
+in_channels: ${dataset.in_channels}
+out_channels: ${dataset.out_channels}
+
+optimizer:
+  lr: 1.0e-3
+  weight_decay: 1.0e-4

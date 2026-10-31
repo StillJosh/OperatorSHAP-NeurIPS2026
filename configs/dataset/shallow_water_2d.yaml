@@ -1,0 +1,9 @@
+defaults:
+  - _grid_2d
+
+dataset_short: sw2d
+in_channels: 1
+
+class_config:
+  pde_name: shallow_water_2d
+  target_var_idx: 0

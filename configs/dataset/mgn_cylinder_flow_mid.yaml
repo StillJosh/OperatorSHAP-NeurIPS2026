@@ -1,0 +1,6 @@
+defaults:
+  - mgn_cylinder_flow
+
+dataset_short: mgn_cylmid
+backbone_short: mgn_cyl
+readout: midpoint

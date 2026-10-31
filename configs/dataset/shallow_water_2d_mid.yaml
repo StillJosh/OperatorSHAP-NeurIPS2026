@@ -1,0 +1,7 @@
+defaults:
+  - shallow_water_2d
+
+dataset_short: sw2dmid
+explainer_lr: 1.0e-3
+backbone_short: sw2d
+readout: midpoint

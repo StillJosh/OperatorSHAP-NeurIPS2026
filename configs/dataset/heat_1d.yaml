@@ -1,0 +1,7 @@
+defaults:
+  - _grid_1d
+
+dataset_short: heat1d
+
+class_config:
+  pde_name: heat_1d

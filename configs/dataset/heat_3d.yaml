@@ -1,0 +1,16 @@
+defaults:
+  - _grid
+  - /model@_global_.model: fno3d
+
+dataset_short: heat3d
+explainer_lr: 1.0e-3
+
+resolutions: [8, 16]
+explainer_resolutions: [8, 16]
+
+x_star: [[0.5, 0.5, 0.5], [0.75, 0.25, 0.25], [0.25, 0.75, 0.75]]
+
+class_config:
+  pde_name: heat_3d
+  t_idx: 5
+  n_spatial_dims: 3

@@ -1,0 +1,7 @@
+defaults:
+  - allen_cahn_1d
+
+dataset_short: ac1dmid
+explainer_lr: 1.0e-3
+backbone_short: ac1d
+readout: midpoint

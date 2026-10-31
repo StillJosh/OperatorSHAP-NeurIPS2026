@@ -1,0 +1,13 @@
+# @package _global_
+debug: true
+device: cpu
+output_root: outputs_debug
+
+dataset:
+  class_config:
+    max_samples: 12
+
+training:
+  batch_size: 2
+  n_epochs: 3
+  num_workers: 0

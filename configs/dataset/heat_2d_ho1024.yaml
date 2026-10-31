@@ -1,0 +1,7 @@
+defaults:
+  - heat_2d
+
+dataset_short: heat2dho1024
+backbone_short: heat2d
+reference_short: heat2d
+explainer_resolutions: [4, 8, 16]

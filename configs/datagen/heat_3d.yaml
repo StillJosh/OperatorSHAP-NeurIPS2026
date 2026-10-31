@@ -1,0 +1,22 @@
+name: heat_3d
+
+solver:
+  _target_: operator_shap.datagen.solvers.analytical_3d.HeatSolver3D
+  params:
+    kappa: 0.01
+
+ic:
+  _target_: operator_shap.datagen.ic_generators.random_fourier_3d
+  n_modes: 4
+  power_decay: 2.0
+  amplitude: 1.0
+
+grid:
+  domain_x: [0.0, 1.0]
+  domain_y: [0.0, 1.0]
+  domain_z: [0.0, 1.0]
+  resolution: 32
+
+time:
+  t_final: 1.0
+  n_snapshots: 11

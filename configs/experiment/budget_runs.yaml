@@ -1,0 +1,6 @@
+# @package _global_
+defaults:
+  - override /attribution: shap
+
+attribution:
+  n_samples: 30

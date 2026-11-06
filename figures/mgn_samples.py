@@ -15,6 +15,7 @@ from matplotlib.patches import Circle, Polygon
 from matplotlib.path import Path as MPath
 from scipy.spatial import ConvexHull
 
+import operator_shap.figures.style 
 from operator_shap.backbone import load_pair
 from operator_shap.dataset import build_test_loader
 from operator_shap.domain import build_domains

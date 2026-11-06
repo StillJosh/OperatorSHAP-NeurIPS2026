@@ -2,8 +2,7 @@
 
 Relative L2 test error ||u_hat - u||_2 / ||u||_2 of every grid backbone, per sample over all channels, median over the 30 test
 samples, at every per-axis resolution of its explainer ladder (``dataset.explainer_resolutions``). Inputs and targets are strided
-from the native grid by the dataset. The MGN backbones are not evaluated, so their rows are ``--``.
-Writes ``results/tables/backbone_error.tex``.
+from the native grid by the dataset. Writes ``results/tables/backbone_error.tex``.
 """
 
 # %%
@@ -32,7 +31,6 @@ ROWS = [
     ("Shallow Water 2D", "shallow_water_2d", None),
     ("Heat 3D", "heat_3d", None),
 ]
-MGN_ROWS = ["MGN Cylinder", "MGN Airfoil"]
 
 # %%
 records = []
@@ -54,6 +52,7 @@ errors = pd.DataFrame(records)
 # %%
 cols = sorted(errors.n_1d.unique())
 med = errors.pivot_table(index="label", columns="n_1d", values="rel_l2_med")
+med.loc["Heat 3D", 16] = float("nan")  # Heat 3D is explained only at n_1d = 8 (n = 512)
 lines = [
     r"\begin{tabular}{l" + "c" * len(cols) + "}",
     r"\toprule",
@@ -63,8 +62,6 @@ lines = [
 for label, *_ in ROWS:
     cells = [f"{med.loc[label, c]:.3f}" if pd.notna(med.loc[label, c]) else "--" for c in cols]
     lines.append(f"{label} & " + " & ".join(cells) + r" \\")
-for label in MGN_ROWS:
-    lines.append(f"{label} & " + " & ".join(["--"] * len(cols)) + r" \\")
 lines += [r"\bottomrule", r"\end{tabular}"]
 TABLE.parent.mkdir(parents=True, exist_ok=True)
 TABLE.write_text("\n".join(lines) + "\n")
